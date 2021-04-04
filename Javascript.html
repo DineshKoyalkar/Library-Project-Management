@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 40%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-width: 37.3%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease-inline;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+<button class="collapsible">&nbsp;&nbsp;&nbsp; An Actor's Story</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Conan Dyle</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Paper</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; The Best American Short Plays 2008-2009</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Barbara Parisi</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Book</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; African Folktales</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Roger D. Abrahams</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Paper</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; Oral Epics from Africa</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : John William Johnson</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Book</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; Love Child</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Gcina Mhlophe</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Paper</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; Seventh Street Alchemy 2004: A Selection of Works</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Jacana Media</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Book</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; Up the Down Escalator</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Linda Rode</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Paper</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; Glass Jars among Trees</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Arja Salafranca</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Book</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; 100 Best-Loved Poems</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Philip Smith</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Paper</p>
+</div>
+<button class="collapsible">&nbsp;&nbsp;&nbsp; The Best American Essays 2009</button>
+<div class="content">
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author : Mary Oliver</p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type - Book</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
